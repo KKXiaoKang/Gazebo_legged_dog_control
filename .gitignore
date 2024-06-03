@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# ros init
+build/
+devel/
+
 # Distribution / packaging
 .Python
 build/
