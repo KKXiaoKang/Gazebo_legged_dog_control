@@ -1,0 +1,606 @@
+#VRML_SIM R2022b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the PigotStlModel
+# Extracted from: D:\webots\My_Project\pigot_stl_model\urdf\pigot_stl_model.urdf
+
+PROTO PigotStlModel [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "PigotStlModel"  # Is `Robot.name`.
+  field  SFString    controller      "void"           # Is `Robot.controller`.
+  field  MFString    controllerArgs  []               # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""               # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE            # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE             # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE            # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Solid {
+        children [
+          Shape {
+            appearance DEF body_link_material PBRAppearance {
+              roughness 1.000000
+              metalness 0
+            }
+            geometry DEF body_link Mesh {
+              url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\body_link.STL"
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.000004 1.000000 -0.000000
+              anchor 0.200000 -0.349800 0.000000
+              dampingConstant 1.0
+              staticFriction 1.0
+            }
+            device [
+              RotationalMotor {
+                name "lf_rot_1"
+                maxVelocity 1.575
+                minPosition -1.57
+                maxPosition 1.57
+                maxTorque 200.0
+              }
+              PositionSensor {
+                name "lf_rot_1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.200000 -0.349800 0.000000
+              rotation 0.577350 0.577352 0.577350 2.094399
+              children [
+                Shape {
+                  appearance DEF lf_link_1_material PBRAppearance {
+                    baseColor 1.000000 0.721570 0.329410
+                    roughness 1.000000
+                    metalness 0
+                  }
+                  geometry DEF lf_link_1 Mesh {
+                    url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\lf_link_1.STL"
+                  }
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0.000004 0.000000 1.000000
+                    anchor -0.050197 0.000000 0.100000
+                    dampingConstant 1.0
+                    staticFriction 1.0
+                  }
+                  device [
+                    RotationalMotor {
+                      name "lf_rot_2"
+                      maxVelocity 1.575
+                      minPosition -3.14
+                      maxPosition 3.14
+                      maxTorque 200.0
+                    }
+                    PositionSensor {
+                      name "lf_rot_2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -0.050197 0.000000 0.100000
+                    rotation 0.000000 1.000000 0.000000 1.570800
+                    children [
+                      Shape {
+                        appearance DEF lf_link_2_material PBRAppearance {
+                          roughness 1.000000
+                          metalness 0
+                        }
+                        geometry DEF lf_link_2 Mesh {
+                          url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\lf_link_2.STL"
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis -1.000000 0.000000 0.000000
+                          anchor -0.017500 -0.350000 0.000000
+                          dampingConstant 1.0
+                          staticFriction 1.0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "lf_rot_3"
+                            maxVelocity 1.575
+                            minPosition -3.14
+                            maxPosition 3.14
+                            maxTorque 200.0
+                          }
+                          PositionSensor {
+                            name "lf_rot_3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation -0.017500 -0.350000 0.000000
+                          children [
+                            Shape {
+                              appearance DEF lf_link_3_material PBRAppearance {
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry DEF lf_link_3 Mesh {
+                                url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\lf_link_3.STL"
+                              }
+                            }
+                          ]
+                          name "lf_link_3"
+                          boundingObject USE lf_link_3
+                          physics Physics {
+                            density -1
+                            mass 2.967300
+                            centerOfMass [ -0.032500 -0.132700 0.000000 ]
+                            inertiaMatrix [
+                              4.184600e-02 2.203900e-03 4.132800e-02
+                              1.833900e-10 3.413800e-09 3.298200e-10
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "lf_link_2"
+                    boundingObject USE lf_link_2
+                    physics Physics {
+                      density -1
+                      mass 9.022700
+                      centerOfMass [ -0.050000 -0.125900 0.000000 ]
+                      inertiaMatrix [
+                        1.344700e-01 2.017400e-02 1.301400e-01
+                        2.773300e-17 -4.113400e-18 2.517700e-17
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "lf_link_1"
+              boundingObject USE lf_link_1
+              physics Physics {
+                density -1
+                mass 3.297300
+                centerOfMass [ -0.050197 0.000000 0.025721 ]
+                inertiaMatrix [
+                  7.567200e-03 7.833100e-03 4.555100e-03
+                  5.143200e-09 -3.468100e-09 2.787300e-09
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000004 -1.000000 -0.000000
+              anchor -0.200000 -0.349800 0.000000
+              dampingConstant 1.0
+              staticFriction 1.0
+            }
+            device [
+              RotationalMotor {
+                name "rf_rot_1"
+                maxVelocity 1.575
+                minPosition -1.57
+                maxPosition 1.57
+                maxTorque 200.0
+              }
+              PositionSensor {
+                name "rf_rot_1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.200000 -0.349800 0.000000
+              rotation -0.577350 -0.577352 0.577350 2.094399
+              children [
+                Shape {
+                  appearance DEF rf_link_1_material PBRAppearance {
+                    baseColor 1.000000 0.721570 0.329410
+                    roughness 1.000000
+                    metalness 0
+                  }
+                  geometry DEF rf_link_1 Mesh {
+                    url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\rf_link_1.STL"
+                  }
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis -0.000004 -0.000000 -1.000000
+                    anchor -0.050197 0.000000 0.100000
+                    dampingConstant 1.0
+                    staticFriction 1.0
+                  }
+                  device [
+                    RotationalMotor {
+                      name "rf_rot_2"
+                      maxVelocity 1.575
+                      minPosition -3.14
+                      maxPosition 3.14
+                      maxTorque 200.0
+                    }
+                    PositionSensor {
+                      name "rf_rot_2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -0.050197 0.000000 0.100000
+                    rotation 0.707105 -0.000003 -0.707108 3.141598
+                    children [
+                      Shape {
+                        appearance DEF rf_link_2_material PBRAppearance {
+                          roughness 1.000000
+                          metalness 0
+                        }
+                        geometry DEF rf_link_2 Mesh {
+                          url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\rf_link_2.STL"
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          anchor -0.017500 -0.350000 0.000000
+                          dampingConstant 1.0
+                          staticFriction 1.0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "rf_rot_3"
+                            maxVelocity 1.575
+                            minPosition -3.14
+                            maxPosition 3.14
+                            maxTorque 200.0
+                          }
+                          PositionSensor {
+                            name "rf_rot_3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation -0.017500 -0.350000 0.000000
+                          children [
+                            Shape {
+                              appearance DEF rf_link_3_material PBRAppearance {
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry DEF rf_link_3 Mesh {
+                                url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\rf_link_3.STL"
+                              }
+                            }
+                          ]
+                          name "rf_link_3"
+                          boundingObject USE rf_link_3
+                          physics Physics {
+                            density -1
+                            mass 2.967291
+                            centerOfMass [ -0.032500 -0.132704 0.000000 ]
+                            inertiaMatrix [
+                              4.184588e-02 2.203921e-03 4.132789e-02
+                              1.833919e-10 3.413848e-09 3.298195e-10
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "rf_link_2"
+                    boundingObject USE rf_link_2
+                    physics Physics {
+                      density -1
+                      mass 9.022671
+                      centerOfMass [ -0.050000 -0.125902 0.000000 ]
+                      inertiaMatrix [
+                        1.344748e-01 2.017419e-02 1.301377e-01
+                        -1.008568e-18 -3.277889e-18 -2.897706e-18
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "rf_link_1"
+              boundingObject USE rf_link_1
+              physics Physics {
+                density -1
+                mass 3.297300
+                centerOfMass [ -0.050197 0.000000 0.025721 ]
+                inertiaMatrix [
+                  7.567200e-03 7.833100e-03 4.555100e-03
+                  6.005900e-09 -3.392800e-09 2.666900e-09
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis -0.000004 -1.000000 0.000000
+              anchor 0.200000 0.349800 0.000000
+              dampingConstant 1.0
+              staticFriction 1.0
+            }
+            device [
+              RotationalMotor {
+                name "lb_rot_1"
+                maxVelocity 1.575
+                minPosition -1.57
+                maxPosition 1.57
+                maxTorque 200.0
+              }
+              PositionSensor {
+                name "lb_rot_1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.200000 0.349800 0.000000
+              rotation 0.577350 -0.577352 -0.577350 2.094399
+              children [
+                Shape {
+                  appearance DEF lb_link_1_material PBRAppearance {
+                    baseColor 1.000000 0.721569 0.329412
+                    roughness 1.000000
+                    metalness 0
+                  }
+                  geometry DEF lb_link_1 Mesh {
+                    url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\lb_link_1.STL"
+                  }
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0.000004 0.000000 -1.000000
+                    anchor -0.050197 0.000000 -0.100000
+                    dampingConstant 1.0
+                    staticFriction 1.0
+                  }
+                  device [
+                    RotationalMotor {
+                      name "lb_rot_2"
+                      maxVelocity 1.575
+                      minPosition -3.14
+                      maxPosition 3.14
+                      maxTorque 200.0
+                    }
+                    PositionSensor {
+                      name "lb_rot_2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -0.050197 0.000000 -0.100000
+                    rotation 0.000000 -1.000000 0.000000 1.570800
+                    children [
+                      Shape {
+                        appearance DEF lb_link_2_material PBRAppearance {
+                          roughness 1.000000
+                          metalness 0
+                        }
+                        geometry DEF lb_link_2 Mesh {
+                          url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\lb_link_2.STL"
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis -1.000000 0.000000 0.000000
+                          anchor -0.017500 -0.350000 0.000000
+                          dampingConstant 1.0
+                          staticFriction 1.0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "lb_rot_3"
+                            maxVelocity 1.575
+                            minPosition -3.14
+                            maxPosition 3.14
+                            maxTorque 200.0
+                          }
+                          PositionSensor {
+                            name "lb_rot_3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation -0.017500 -0.350000 0.000000
+                          children [
+                            Shape {
+                              appearance DEF lb_link_3_material PBRAppearance {
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry DEF lb_link_3 Mesh {
+                                url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\lb_link_3.STL"
+                              }
+                            }
+                          ]
+                          name "lb_link_3"
+                          boundingObject USE lb_link_3
+                          physics Physics {
+                            density -1
+                            mass 2.967291
+                            centerOfMass [ -0.032500 -0.132704 0.000000 ]
+                            inertiaMatrix [
+                              4.184588e-02 2.203921e-03 4.132789e-02
+                              1.833919e-10 3.413848e-09 3.298195e-10
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "lb_link_2"
+                    boundingObject USE lb_link_2
+                    physics Physics {
+                      density -1
+                      mass 9.022671
+                      centerOfMass [ -0.050000 -0.125902 -0.000000 ]
+                      inertiaMatrix [
+                        1.344748e-01 2.017419e-02 1.301377e-01
+                        3.075587e-17 -7.771493e-18 1.969340e-17
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "lb_link_1"
+              boundingObject USE lb_link_1
+              physics Physics {
+                density -1
+                mass 3.297296
+                centerOfMass [ -0.050197 -0.000000 -0.025721 ]
+                inertiaMatrix [
+                  7.567151e-03 7.833062e-03 4.555137e-03
+                  -5.348813e-09 3.678131e-09 2.673068e-09
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000004 1.000000 0.000000
+              anchor -0.200000 0.349800 0.000000
+              dampingConstant 1.0
+              staticFriction 1.0
+            }
+            device [
+              RotationalMotor {
+                name "rb_rot_1"
+                maxVelocity 1.575
+                minPosition -1.57
+                maxPosition 1.57
+                maxTorque 200.0
+              }
+              PositionSensor {
+                name "rb_rot_1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.200000 0.349800 0.000000
+              rotation -0.577350 0.577352 -0.577350 2.094399
+              children [
+                Shape {
+                  appearance DEF rb_link_1_material PBRAppearance {
+                    baseColor 1.000000 0.721569 0.329412
+                    roughness 1.000000
+                    metalness 0
+                  }
+                  geometry DEF rb_link_1 Mesh {
+                    url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\rb_link_1.STL"
+                  }
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis -0.000004 0.000000 1.000000
+                    anchor -0.050197 0.000000 -0.100000
+                    dampingConstant 1.0
+                    staticFriction 1.0
+                  }
+                  device [
+                    RotationalMotor {
+                      name "rb_rot_2"
+                      maxVelocity 1.575
+                      minPosition -3.14
+                      maxPosition 3.14
+                      maxTorque 200.0
+                    }
+                    PositionSensor {
+                      name "rb_rot_2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -0.050197 0.000000 -0.100000
+                    rotation 0.707105 0.000003 0.707108 3.141598
+                    children [
+                      Shape {
+                        appearance DEF rb_link_2_material PBRAppearance {
+                          roughness 1.000000
+                          metalness 0
+                        }
+                        geometry DEF rb_link_2 Mesh {
+                          url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\rb_link_2.STL"
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          anchor -0.017500 -0.350000 0.000000
+                          dampingConstant 1.0
+                          staticFriction 1.0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "rb_rot_3"
+                            maxVelocity 1.575
+                            minPosition -3.14
+                            maxPosition 3.14
+                            maxTorque 200.0
+                          }
+                          PositionSensor {
+                            name "rb_rot_3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation -0.017500 -0.350000 0.000000
+                          children [
+                            Shape {
+                              appearance DEF rb_link_3_material PBRAppearance {
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry DEF rb_link_3 Mesh {
+                                url "D:\\webots\\My_Project\\pigot_stl_model\\meshes\\rb_link_3.STL"
+                              }
+                            }
+                          ]
+                          name "rb_link_3"
+                          boundingObject USE rb_link_3
+                          physics Physics {
+                            density -1
+                            mass 2.967291
+                            centerOfMass [ -0.032500 -0.132704 0.000000 ]
+                            inertiaMatrix [
+                              4.184588e-02 2.203921e-03 4.132789e-02
+                              1.833919e-10 3.413848e-09 3.298195e-10
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "rb_link_2"
+                    boundingObject USE rb_link_2
+                    physics Physics {
+                      density -1
+                      mass 9.022671
+                      centerOfMass [ -0.050000 -0.125902 -0.000000 ]
+                      inertiaMatrix [
+                        1.344748e-01 2.017419e-02 1.301377e-01
+                        -5.344198e-19 -3.368672e-18 -3.315836e-18
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "rb_link_1"
+              boundingObject USE rb_link_1
+              physics Physics {
+                density -1
+                mass 3.297294
+                centerOfMass [ -0.050197 -0.000000 -0.025721 ]
+                inertiaMatrix [
+                  7.567150e-03 7.833061e-03 4.555135e-03
+                  -5.266510e-09 3.482205e-09 2.785545e-09
+                ]
+              }
+            }
+          }
+        ]
+        name "body_link"
+        boundingObject USE body_link
+        physics Physics {
+          density -1
+          mass 25.117000
+          centerOfMass [ 0.000000 -0.000000 0.000000 ]
+          inertiaMatrix [
+            1.926800e+00 3.986800e-01 2.162100e+00
+            2.174400e-07 6.062300e-11 -7.989800e-07
+          ]
+        }
+      }
+    ]
+    name IS name
+  }
+}
