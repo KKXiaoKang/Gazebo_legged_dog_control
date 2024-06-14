@@ -66,7 +66,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_arm_pitch" type="revolute">
+    <joint name="l_arm_pitch_joint" type="revolute">
         <origin xyz="-0.0175475823124921 0.254700000000031 0.324500000000024" rpy="0 0 0" />
         <parent link="torso" />
         <child link="l_arm_pitch" />
@@ -95,7 +95,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_arm_roll" type="revolute">
+    <joint name="l_arm_roll_joint" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="l_arm_pitch" />
         <child link="l_arm_roll" />
@@ -124,7 +124,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_arm_yaw" type="revolute">
+    <joint name="l_arm_yaw_joint" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="l_arm_roll" />
         <child link="l_arm_yaw" />
@@ -153,7 +153,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_forearm_pitch" type="revolute">
+    <joint name="l_forearm_pitch_joint" type="revolute">
         <origin xyz="0 0 -0.163599999999996" rpy="0 0 0" />
         <parent link="l_arm_yaw" />
         <child link="l_forearm_pitch" />
@@ -182,7 +182,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_hand_yaw" type="revolute">
+    <joint name="l_hand_yaw_joint" type="revolute">
         <origin xyz="0 0 -0.132050000118071" rpy="0 0 0" />
         <parent link="l_forearm_pitch" />
         <child link="l_hand_yaw" />
@@ -211,7 +211,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_hand_pitch" type="revolute">
+    <joint name="l_hand_pitch_joint" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="l_hand_yaw" />
         <child link="l_hand_pitch" />
@@ -240,7 +240,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_hand_roll" type="revolute">
+    <joint name="l_hand_roll_joint" type="revolute">
         <origin xyz="0 0 -0.058999997180792" rpy="0 0 0" />
         <parent link="l_hand_pitch" />
         <child link="l_hand_roll" />
@@ -285,7 +285,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_thumb_proximal_yaw" type="continuous">
+    <joint name="l_thumb_proximal_yaw_joint" type="continuous">
         <origin xyz="0.0250000027597683 -0.0216278329431251 -0.110700000402975" rpy="0 0 0" />
         <parent link="l_hand_roll" />
         <child link="l_thumb_proximal_yaw" />
@@ -313,7 +313,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_thumb_distal_pitch" type="continuous">
+    <joint name="l_thumb_distal_pitch_joint" type="continuous">
         <origin xyz="0.0120000000000023 -0.00649999999999773 0" rpy="0 0 0" />
         <parent link="l_thumb_proximal_yaw" />
         <child link="l_thumb_distal_pitch" />
@@ -341,7 +341,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_index_proximal_finger" type="continuous">
+    <joint name="l_index_proximal_finger_joint" type="continuous">
         <origin xyz="0.0295025377507617 0.0039487923396046 -0.174730558860478" rpy="0 -0.0311675978215656 0" />
         <parent link="l_hand_roll" />
         <child link="l_index_proximal_finger" />
@@ -369,7 +369,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_index_distal_finger" type="continuous">
+    <joint name="l_index_distal_finger_joint" type="continuous">
         <origin xyz="0.00013351949359549 0.00243998929947531 -0.0349145904281216" rpy="0 0 0" />
         <parent link="l_index_proximal_finger" />
         <child link="l_index_distal_finger" />
@@ -397,7 +397,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_middle_proximal_finger" type="continuous">
+    <joint name="l_middle_proximal_finger_joint" type="continuous">
         <origin xyz="0.00850000275976636 0.00820381922686209 -0.178435376742696" rpy="0 0 0" />
         <parent link="l_hand_roll" />
         <child link="l_middle_proximal_finger" />
@@ -425,7 +425,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_middle_distal_finger" type="continuous">
+    <joint name="l_middle_distal_finger_joint" type="continuous">
         <origin xyz="0 0.00292977189725752 -0.0418976901109154" rpy="0 0 0" />
         <parent link="l_middle_proximal_finger" />
         <child link="l_middle_distal_finger" />
@@ -453,7 +453,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_ring_proximal_finger" type="continuous">
+    <joint name="l_ring_proximal_finger_joint" type="continuous">
         <origin xyz="-0.0126025322312212 0.0080785614881318 -0.176446661066021" rpy="0 0.0311675978215913 0" />
         <parent link="l_hand_roll" />
         <child link="l_ring_proximal_finger" />
@@ -481,7 +481,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_ring_distal_finger" type="continuous">
+    <joint name="l_ring_distal_finger_joint" type="continuous">
         <origin xyz="-0.000160223392310654 0.0029279871592986 -0.0418975085137674" rpy="0 0 0" />
         <parent link="l_ring_proximal_finger" />
         <child link="l_ring_distal_finger" />
@@ -509,7 +509,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_pinky_proximal_finger" type="continuous">
+    <joint name="l_pinky_proximal_finger_joint" type="continuous">
         <origin xyz="-0.0332309186593585 0.00363387338808113 -0.170227008036839" rpy="0 0.0659957839625552 0" />
         <parent link="l_hand_roll" />
         <child link="l_pinky_proximal_finger" />
@@ -537,7 +537,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_pinky_distal_finger" type="continuous">
+    <joint name="l_pinky_distal_finger_joint" type="continuous">
         <origin xyz="-0.000139217094110203 0.00243552926671115 -0.0349148795758059" rpy="0 0 0" />
         <parent link="l_pinky_proximal_finger" />
         <child link="l_pinky_distal_finger" />
@@ -565,7 +565,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_arm_pitch" type="revolute">
+    <joint name="r_arm_pitch_joint" type="revolute">
         <origin xyz="-0.0175475823119764 -0.254700000000003 0.324500000000024" rpy="0 0 0" />
         <parent link="torso" />
         <child link="r_arm_pitch" />
@@ -594,7 +594,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_arm_roll" type="revolute">
+    <joint name="r_arm_roll_joint" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="r_arm_pitch" />
         <child link="r_arm_roll" />
@@ -623,7 +623,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_arm_yaw" type="revolute">
+    <joint name="r_arm_yaw_joint" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="r_arm_roll" />
         <child link="r_arm_yaw" />
@@ -652,7 +652,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_forearm_pitch" type="revolute">
+    <joint name="r_forearm_pitch_joint" type="revolute">
         <origin xyz="0 0 -0.1636" rpy="0 0 0" />
         <parent link="r_arm_yaw" />
         <child link="r_forearm_pitch" />
@@ -681,7 +681,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_hand_yaw" type="revolute">
+    <joint name="r_hand_yaw_joint" type="revolute">
         <origin xyz="0 0 -0.132050000118069" rpy="0 0 0" />
         <parent link="r_forearm_pitch" />
         <child link="r_hand_yaw" />
@@ -710,7 +710,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_hand_pitch" type="revolute">
+    <joint name="r_hand_pitch_joint" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="r_hand_yaw" />
         <child link="r_hand_pitch" />
@@ -739,7 +739,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_hand_roll" type="revolute">
+    <joint name="r_hand_roll_joint" type="revolute">
         <origin xyz="0 0 -0.0590000000076598" rpy="0 0 0" />
         <parent link="r_hand_pitch" />
         <child link="r_hand_roll" />
@@ -784,7 +784,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_thumb_proximal_yaw" type="continuous">
+    <joint name="r_thumb_proximal_yaw_joint" type="continuous">
         <origin xyz="0.0240162583145044 0.0216278329431261 -0.110700000402968" rpy="0 0 0" />
         <parent link="r_hand_roll" />
         <child link="r_thumb_proximal_yaw" />
@@ -812,7 +812,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_thumb_distal_pitch" type="continuous">
+    <joint name="r_thumb_distal_pitch_joint" type="continuous">
         <origin xyz="0.0120000000000024 0.00650000000000001 0.00039999999999929" rpy="0 0 0" />
         <parent link="r_thumb_proximal_yaw" />
         <child link="r_thumb_distal_pitch" />
@@ -840,7 +840,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_index_proximal_finger" type="continuous">
+    <joint name="r_index_proximal_finger_joint" type="continuous">
         <origin xyz="0.0285187933054979 -0.0039487923396026 -0.174730558860479" rpy="0 -0.0311675978215671 0" />
         <parent link="r_hand_roll" />
         <child link="r_index_proximal_finger" />
@@ -868,7 +868,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_index_distal_finger" type="continuous">
+    <joint name="r_index_distal_finger_joint" type="continuous">
         <origin xyz="0.000133519493595612 -0.00243998929947775 -0.0349145904281185" rpy="0 0 0" />
         <parent link="r_index_proximal_finger" />
         <child link="r_index_distal_finger" />
@@ -896,7 +896,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_middle_proximal_finger" type="continuous">
+    <joint name="r_middle_proximal_finger_joint" type="continuous">
         <origin xyz="0.00751625831450465 -0.00820381922686125 -0.178435376742697" rpy="0 0 0" />
         <parent link="r_hand_roll" />
         <child link="r_middle_proximal_finger" />
@@ -924,7 +924,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_middle_distal_finger" type="continuous">
+    <joint name="r_middle_distal_finger_joint" type="continuous">
         <origin xyz="0 -0.00292977189725413 -0.0418976901109125" rpy="0 0 0" />
         <parent link="r_middle_proximal_finger" />
         <child link="r_middle_distal_finger" />
@@ -952,7 +952,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_ring_proximal_finger" type="continuous">
+    <joint name="r_ring_proximal_finger_joint" type="continuous">
         <origin xyz="-0.0135862766764854 -0.00807856148813096 -0.176446661066022" rpy="0 0.0311675978215922 0" />
         <parent link="r_hand_roll" />
         <child link="r_ring_proximal_finger" />
@@ -980,7 +980,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_ring_distal_finger" type="continuous">
+    <joint name="r_ring_distal_finger_joint" type="continuous">
         <origin xyz="-0.000160223392313565 -0.00292798715935183 -0.0418975085136676" rpy="0 0 0" />
         <parent link="r_ring_proximal_finger" />
         <child link="r_ring_distal_finger" />
@@ -1008,7 +1008,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_pinky_proximal_finger" type="continuous">
+    <joint name="r_pinky_proximal_finger_joint" type="continuous">
         <origin xyz="-0.0342146631046227 -0.0036338733880803 -0.17022700803684" rpy="0 0.0659957839625563 0" />
         <parent link="r_hand_roll" />
         <child link="r_pinky_proximal_finger" />
@@ -1036,7 +1036,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_pinky_distal_finger" type="continuous">
+    <joint name="r_pinky_distal_finger_joint" type="continuous">
         <origin xyz="-0.00013921709411558 -0.0024355292668054 -0.0349148795757724" rpy="0 0 0" />
         <parent link="r_pinky_proximal_finger" />
         <child link="r_pinky_distal_finger" />
@@ -1064,7 +1064,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_leg_roll" type="continuous">
+    <joint name="l_leg_roll_joint" type="continuous">
         <origin xyz="-0.00254758231249262 0.0869999999999998 -0.0660000000049238" rpy="0 0 0" />
         <parent link="torso" />
         <child link="l_leg_roll" />
@@ -1092,7 +1092,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_leg_yaw" type="continuous">
+    <joint name="l_leg_yaw_joint" type="continuous">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="l_leg_roll" />
         <child link="l_leg_yaw" />
@@ -1120,7 +1120,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_leg_pitch" type="continuous">
+    <joint name="l_leg_pitch_joint" type="continuous">
         <origin xyz="0 0.025450000000002 -0.123449999999999" rpy="0 0 0" />
         <parent link="l_leg_yaw" />
         <child link="l_leg_pitch" />
@@ -1148,7 +1148,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_knee" type="continuous">
+    <joint name="l_knee_joint" type="continuous">
         <origin xyz="-0.010390161952608 0 -0.249783995753446" rpy="0 0 0" />
         <parent link="l_leg_pitch" />
         <child link="l_knee" />
@@ -1176,7 +1176,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_foot_pitch" type="continuous">
+    <joint name="l_foot_pitch_joint" type="continuous">
         <origin xyz="0 0 -0.346000000000004" rpy="0 0 0" />
         <parent link="l_knee" />
         <child link="l_foot_pitch" />
@@ -1204,7 +1204,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_foot_roll" type="continuous">
+    <joint name="l_foot_roll_joint" type="continuous">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="l_foot_pitch" />
         <child link="l_foot_roll" />
@@ -1232,7 +1232,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_l_bar" type="continuous">
+    <joint name="l_l_bar_joint" type="continuous">
         <origin xyz="0 0.0260000000000038 -0.09" rpy="0 0 0" />
         <parent link="l_knee" />
         <child link="l_l_bar" />
@@ -1260,7 +1260,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_l_tendon" type="continuous">
+    <joint name="l_l_tendon_joint" type="continuous">
         <origin xyz="-0.0579999994738184 0 0" rpy="0 0 0" />
         <parent link="l_l_bar" />
         <child link="l_l_tendon" />
@@ -1288,7 +1288,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_r_bar" type="continuous">
+    <joint name="l_r_bar_joint" type="continuous">
         <origin xyz="0 -0.0259999999999997 -0.153" rpy="0 0 0" />
         <parent link="l_knee" />
         <child link="l_r_bar" />
@@ -1316,7 +1316,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="l_r_tendon" type="continuous">
+    <joint name="l_r_tendon_joint" type="continuous">
         <origin xyz="-0.0579999990742142 0 -1.03629629222279E-05" rpy="0 0 0" />
         <parent link="l_r_bar" />
         <child link="l_r_tendon" />
@@ -1344,7 +1344,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_leg_roll" type="continuous">
+    <joint name="r_leg_roll_joint" type="continuous">
         <origin xyz="-0.00254758231249268 -0.0870000000000003 -0.0660000000049238" rpy="0 0 0" />
         <parent link="torso" />
         <child link="r_leg_roll" />
@@ -1372,7 +1372,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_leg_yaw" type="continuous">
+    <joint name="r_leg_yaw_joint" type="continuous">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="r_leg_roll" />
         <child link="r_leg_yaw" />
@@ -1400,7 +1400,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_leg_pitch" type="continuous">
+    <joint name="r_leg_pitch_joint" type="continuous">
         <origin xyz="0 -0.0254500000000034 -0.123449999999998" rpy="0 0 0" />
         <parent link="r_leg_yaw" />
         <child link="r_leg_pitch" />
@@ -1428,7 +1428,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_knee" type="continuous">
+    <joint name="r_knee_joint" type="continuous">
         <origin xyz="-0.0103901619526017 0 -0.249783995753447" rpy="0 0 0" />
         <parent link="r_leg_pitch" />
         <child link="r_knee" />
@@ -1456,7 +1456,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_foot_pitch" type="continuous">
+    <joint name="r_foot_pitch_joint" type="continuous">
         <origin xyz="0 0 -0.346000000000011" rpy="0 0 0" />
         <parent link="r_knee" />
         <child link="r_foot_pitch" />
@@ -1484,7 +1484,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_foot_roll" type="continuous">
+    <joint name="r_foot_roll_joint" type="continuous">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="r_foot_pitch" />
         <child link="r_foot_roll" />
@@ -1512,7 +1512,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_l_bar" type="continuous">
+    <joint name="r_l_bar_joint" type="continuous">
         <origin xyz="0 0.0260000000000006 -0.153" rpy="0 0 0" />
         <parent link="r_knee" />
         <child link="r_l_bar" />
@@ -1540,7 +1540,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_l_tendon" type="continuous">
+    <joint name="r_l_tendon_joint" type="continuous">
         <origin xyz="-0.0579999990740259 0 -1.03629629334412E-05" rpy="0 0 0" />
         <parent link="r_l_bar" />
         <child link="r_l_tendon" />
@@ -1568,7 +1568,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_r_bar" type="continuous">
+    <joint name="r_r_bar_joint" type="continuous">
         <origin xyz="0 -0.0259999999999875 -0.09" rpy="0 0 0" />
         <parent link="r_knee" />
         <child link="r_r_bar" />
@@ -1596,7 +1596,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="r_r_tendon" type="continuous">
+    <joint name="r_r_tendon_joint" type="continuous">
         <origin xyz="-0.0579999994737613 0 0" rpy="0 0 0" />
         <parent link="r_r_bar" />
         <child link="r_r_tendon" />
@@ -1624,7 +1624,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="head_yaw" type="continuous">
+    <joint name="head_yaw_joint" type="continuous">
         <origin xyz="-0.0175475823124929 0 0.499400000000373" rpy="0 0 0" />
         <parent link="torso" />
         <child link="head_yaw" />
@@ -1652,7 +1652,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="head_pitch" type="continuous">
+    <joint name="head_pitch_joint" type="continuous">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="head_yaw" />
         <child link="head_pitch" />
@@ -1675,571 +1675,5 @@
         <parent link="head_pitch" />
         <child link="head_camera" />
     </joint>
-
-    <transmission name="trans_l_arm_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_arm_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_arm_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_arm_roll">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_arm_roll">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_arm_roll_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_arm_yaw">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_arm_yaw">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_arm_yaw_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_forearm_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_forearm_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_forearm_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_hand_yaw">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_hand_yaw">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_hand_yaw_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_hand_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_hand_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_hand_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_hand_roll">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_hand_roll">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_hand_roll_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_thumb_proximal_yaw">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_thumb_proximal_yaw">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_thumb_proximal_yaw_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_thumb_distal_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_thumb_distal_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_thumb_distal_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_index_proximal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_index_proximal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_index_proximal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_index_distal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_index_distal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_index_distal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_middle_proximal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_middle_proximal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_middle_proximal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_middle_distal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_middle_distal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_middle_distal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_ring_proximal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_ring_proximal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_ring_proximal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_ring_distal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_ring_distal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_ring_distal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_pinky_proximal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_pinky_proximal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_pinky_proximal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_pinky_distal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_pinky_distal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_pinky_distal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_arm_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_arm_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_arm_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_arm_roll">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_arm_roll">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_arm_roll_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_arm_yaw">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_arm_yaw">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_arm_yaw_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_forearm_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_forearm_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_forearm_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_hand_yaw">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_hand_yaw">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_hand_yaw_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_hand_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_hand_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_hand_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_hand_roll">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_hand_roll">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_hand_roll_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_thumb_proximal_yaw">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_thumb_proximal_yaw">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_thumb_proximal_yaw_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_thumb_distal_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_thumb_distal_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_thumb_distal_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_index_proximal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_index_proximal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_index_proximal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_index_distal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_index_distal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_index_distal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_middle_proximal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_middle_proximal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_middle_proximal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_middle_distal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_middle_distal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_middle_distal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_ring_proximal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_ring_proximal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_ring_proximal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_ring_distal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_ring_distal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_ring_distal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_pinky_proximal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_pinky_proximal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_pinky_proximal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_pinky_distal_finger">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_pinky_distal_finger">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_pinky_distal_finger_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_leg_roll">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_leg_roll">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_leg_roll_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_leg_yaw">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_leg_yaw">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_leg_yaw_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_leg_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_leg_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_leg_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_knee">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_knee">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_knee_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_foot_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_foot_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_foot_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_foot_roll">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_foot_roll">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_foot_roll_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_l_bar">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_l_bar">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_l_bar_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_l_tendon">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_l_tendon">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_l_tendon_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_r_bar">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_r_bar">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_r_bar_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_l_r_tendon">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="l_r_tendon">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="l_r_tendon_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_leg_roll">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_leg_roll">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_leg_roll_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_leg_yaw">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_leg_yaw">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_leg_yaw_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_leg_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_leg_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_leg_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_knee">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_knee">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_knee_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_foot_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_foot_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_foot_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_foot_roll">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_foot_roll">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_foot_roll_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_l_bar">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_l_bar">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_l_bar_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_l_tendon">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_l_tendon">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_l_tendon_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_r_bar">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_r_bar">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_r_bar_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_r_r_tendon">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="r_r_tendon">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="r_r_tendon_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_head_yaw">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="head_yaw">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="head_yaw_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_head_pitch">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="head_pitch">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="head_pitch_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <gazebo>
-        <plugin name="gazebo_ros_control">
-            <robotNamespace>/</robotNamespace>
-        </plugin>
-    </gazebo>
 </robot>
 
